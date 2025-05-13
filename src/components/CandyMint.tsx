@@ -78,8 +78,8 @@ export const CandyMint: FC = () => {
         message: '',
         type: 'info'
     });
-    const [assetID, setNFTMintAddress] = useState(''); 
-    
+    const [assetID, setNFTMintAddress] = useState('');
+
 
     const showNotification = ({ type, message, txid = null }) => {
         // Clear any existing timeout to prevent previous notifications from disappearing
@@ -396,7 +396,7 @@ export const CandyMint: FC = () => {
         console.log("_o" + _o);
     }, [wallet.publicKey, connection, getUserSOLBalance, _showWL1, _showWL2, _showWL3, _pageNo])
 
-    const walletButtonStyle = useMemo(() => ({
+    const walletButtonStyle = useMemo<React.CSSProperties>(() => ({
         backgroundColor: '#8dcae5',
         color: 'black',
         borderRadius: '12px',
@@ -444,8 +444,8 @@ export const CandyMint: FC = () => {
                             rel="noopener noreferrer"
                             className="notification-link"
                         >
-                       
-                            
+
+
                             View on Explorer
                         </a>
                     )}
