@@ -1,0 +1,589 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Mochiy+Pop+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
+/* Apply Quicksand font globally */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-image: radial-gradient(circle farthest-side at 50% 100%, #fffbd4,
+      #fffbd4 36%,
+      #fffbd4 55%,
+      #fffbd4);
+  overflow-x: hidden;
+  overflow-y: auto;
+  /* or scroll if you want a scroll bar to always appear */
+
+}
+
+.mintDetails {
+  background-color: #fffbd4;
+}
+
+
+#colorH {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+#colorH2 {
+  font-weight: bold;
+  font-size: 28px;
+}
+
+#colorH4 {
+  flex-flow: column;
+}
+
+
+@media screen and (max-width: 499px) {
+  #colorH {
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  #colorH2 {
+    font-weight: bold;
+    font-size: 22px;
+  }
+
+  #colorH3 {
+    width: 50%;
+  }
+
+  #colorH4 {
+    flex-flow: column;
+  }
+
+  #colorH4 {
+    font-size: 18px;
+    font-weight: 500;
+  }
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background-color: white;
+}
+
+a {
+  color: rgb(40, 107, 250);
+}
+
+#response {
+  color: black;
+  font-weight: bold;
+}
+
+/* Main container */
+.main-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Title styling */
+.main-title {
+  line-height: 1.2;
+  color: black;
+  margin-bottom: 1.5rem;
+}
+
+/* Title line breaks */
+.title-line {
+  display: block;
+  font-size: 35px;
+}
+
+/* Subtitle */
+.subtitle {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: #64748b;
+  max-width: 600px;
+  margin: 0 auto 1rem;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+/* Mint details */
+.mint-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Mint info row */
+.mint-info {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  font-size: 1.125rem;
+  font-family: "Figtree", sans-serif;
+
+}
+
+.mint-button {
+  background: #72f65d;
+  /* bright cartoon green */
+  color: #293534;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 900;
+  /* use a bold weight to match the cartoon look */
+  text-transform: uppercase;
+  font-family: "Figtree", sans-serif;
+  border: 2px solid #465a58;
+  box-shadow: 3px 3px 0 #465a58;
+  cursor: pointer;
+  transition: transform 0.1s ease-in-out;
+}
+
+/* Press-down animation */
+.mint-button:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 #222;
+}
+
+
+.mint-button:hover {
+  transform: scale(1.05);
+}
+
+#txtColor {
+  font-family: 'Comic Sans MS', 'Arial Rounded MT Bold', sans-serif;
+  text-align: center;
+  font-size: 26px;
+  font-weight: 900;
+  color: rgb(49, 49, 49);
+
+}
+
+#txtColor2 {
+  font-family: 'Comic Sans MS', 'Arial Rounded MT Bold', sans-serif;
+  font-size: 23px;
+  font-weight: 700;
+  color: white;
+  -webkit-text-stroke: 1.2px black;
+  text-align: center;
+
+}
+
+#navBg {
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
+#otherBtns {
+  background-color: rgb(0, 0, 22);
+  color: white;
+  font-size: 25px;
+  width: 450px;
+  margin: 15px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  display: none;
+}
+
+#walletCenter {
+  margin-left: -30px;
+}
+
+
+@media screen and (max-width: 499px) {
+  .title-line {
+    display: block;
+    font-size: 25px;
+  }
+
+  #walletCenter {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
+
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  .title-line {
+    display: block;
+    font-size: 25px;
+  }
+
+  #walletCenter {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
+
+/* Add these new styles for the update form */
+.update-metadata-section {
+  max-width: 400px;
+  margin: 30px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.update-metadata-section h3 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #000000;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #000000;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(0, 0, 0, 0.2);
+  color: #000000;
+}
+
+/* Asset browser styles */
+.asset-browser-section {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.asset-browser-section h3 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.asset-browser-controls {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.error-message {
+  color: #ff6666;
+  text-align: center;
+  margin: 10px 0;
+  padding: 8px;
+  background: rgba(255, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+.assets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.asset-card {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.asset-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.asset-card img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  display: block;
+}
+
+.placeholder-image {
+  width: 100%;
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #444;
+  color: #888;
+  font-weight: bold;
+}
+
+.asset-info {
+  padding: 8px;
+}
+
+.asset-name {
+  font-size: 12px;
+  font-weight: 500;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.asset-id {
+  font-size: 10px;
+  color: #aaa;
+  margin-top: 4px;
+}
+
+.load-more-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.load-more-button {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.load-more-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.no-assets-message {
+  text-align: center;
+  color: #aaa;
+  padding: 20px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
+
+.mintSection {
+  margin: 30px auto 20px auto;
+  padding: 20px;
+  background-color: #fffbeb;
+  border: 3px solid #2c2d2e;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 5px 5px 0 #2c2d2e;
+  max-width: 320px;
+  font-family: "Mochiy Pop One", sans-serif;
+}
+
+.idAmount {
+  font-size: 15px;
+  margin-bottom: 15px;
+  color: black;
+  font-weight: 800;
+  cursor: pointer;
+  display: inline-block;
+  padding: 6px 14px;
+  background-color: #8dcae5;
+  border: 3px solid #2c2d2e;
+  border-radius: 8px;
+  box-shadow: 4px 4px 0 #2c2d2e;
+  text-shadow: 1px 1px 0 #fff;
+  transition: transform 0.1s ease-in-out;
+}
+
+.idAmount:hover {
+  transform: scale(1.05) skew(-2deg);
+}
+
+.mintedNFT {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  border: 4px solid #2c2d2e;
+  object-fit: cover;
+  display: block;
+  margin: 12px auto 0 auto;
+  background-color: #ffffff;
+}
+
+
+#wallet {
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  display: flex;
+}
+
+#wallet2 {
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  display: flex;
+  margin-top: 20px;
+}
+
+.wallet-button-container {
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.mintBtns {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.custom-notification {
+  margin-top: 12px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.custom-notification.success {
+  color: #10b981;
+}
+
+.custom-notification.error {
+  color: #ef4444;
+}
+
+.custom-notification.info {
+  color: rgb(32, 126, 248);
+}
+
+.custom-notification.loading {
+  color: rgb(51, 51, 51);
+  position: relative;
+}
+
+.notification-message {
+  font-size: 17px;
+  font-weight: 500;
+  margin-bottom: 4px;
+  letter-spacing: 0.025em;
+  font-family: 'Comic Sans MS', 'Arial Rounded MT Bold', sans-serif;
+  text-shadow: 2px 8px 6px rgba(0,0,0,0.2), 0px -5px 35px rgba(255,255,255,0.3);
+}
+
+.custom-notification.loading .notification-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-notification.loading .notification-message::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  margin-left: 8px;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+}
+
+.notification-link {
+  font-size: 12px;
+  color: rgb(51, 51, 51);
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-top: 4px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.notification-link:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.custom-notification.loading {
+  color: rgb(51, 51, 51);
+  position: relative;
+}
+
+.custom-notification.loading .notification-message::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  margin-left: 8px;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.possum-title {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 4.3rem; /* adjust size as needed */
+  color: white;
+  -webkit-text-stroke: 3px #465a58;
+  text-align: center;
+  margin: 1rem 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  
+}
+
+.copyAlert{
+  color: #129eda;
+    font-family: 'Comic Sans MS', 'Arial Rounded MT Bold', sans-serif;
+}
