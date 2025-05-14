@@ -21,11 +21,15 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  background: transparent;
+  background-image: radial-gradient(circle farthest-side at 50% 100%, #fffbd4,
+      #fffbd4 36%,
+      #fffbd4 55%,
+      #fffbd4);
   overflow-x: hidden;
-  overflow-y: auto; /* or scroll if you want a scroll bar to always appear */
-}
+  overflow-y: auto;
+  /* or scroll if you want a scroll bar to always appear */
 
+}
 
 .mintDetails {
   background-color: #fffbd400;
