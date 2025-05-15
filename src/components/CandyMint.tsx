@@ -81,7 +81,7 @@ export const CandyMint: FC = () => {
     const [assetID, setNFTMintAddress] = useState('');
 
 
-    const showNotification = ({ type, message, txid = null }) => {
+    const showNotification_copy = ({ type, message, txid = null }) => {
         // Clear any existing timeout to prevent previous notifications from disappearing
         if (notificationTimeout) {
             clearTimeout(notificationTimeout);
@@ -101,6 +101,29 @@ export const CandyMint: FC = () => {
         }, 4000);*/
 
         //setNotificationTimeout();
+    };
+
+    const showNotification = ({ type, message, txid = null }) => {
+        // Clear any existing timeout to prevent previous notifications from disappearing
+        if (notificationTimeout) {
+            clearTimeout(notificationTimeout);
+        }
+
+        // Show the new notification
+        setNotification({
+            visible: true,
+            message,
+            type,
+            txid
+        });
+
+        // Set a new timeout only for error notifications
+        if (type === 'error') {
+            const timeoutId = setTimeout(() => {
+                setNotification(prev => ({ ...prev, visible: false }));
+            }, 5000); // 3000 milliseconds = 3 seconds
+            setNotificationTimeout(timeoutId);
+        }
     };
 
     // Don't forget to clear the timeout when component unmounts
@@ -414,6 +437,7 @@ export const CandyMint: FC = () => {
 
     return (
         <div className="mintDetails">
+
             <div className="mint-info" id="colorH4">
                 <span id='txtColor'>Minted {_itemsRedeemed}/1000</span>
                 <div id='txtColor2'>Price: 0.75 SOL</div>
@@ -435,18 +459,6 @@ export const CandyMint: FC = () => {
             {notification.visible && (
                 <div className={`custom-notification ${notification.type}`}>
                     <span className="notification-message">{notification.message}</span>
-                    {notification.txid && (
-                        <a
-                            href={`https://solana.fm/tx/${notification.txid}?cluster=devnet-alpha`}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="notification-link"
-                        >
-
-
-                            View on Explorer
-                        </a>
-                    )}
                 </div>
             )}
 
@@ -466,7 +478,7 @@ export const CandyMint: FC = () => {
                         </div>
                     )}
                     <a
-                        href={`https://solana.fm/tx/${notification.txid}?cluster=devnet-alpha`}
+                        href={`https://solana.fm/tx/${notification.txid}?cluster=mainnet-alpha`}
                         target="_blank"
                         rel="noopener noreferrer"
                         style={{ textDecoration: 'none' }}
