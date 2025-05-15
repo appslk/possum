@@ -46,9 +46,17 @@ const WalletContextProvider: FC<{ children: ReactNode }> = ({ children }) => {
         [network]
     );
 
-    const onError = useCallback(
+    /*const onError = useCallback(
         (error: WalletError) => {
             notify({ type: 'error', message: error.message ? `${error.name}: ${error.message}` : error.name });
+            console.error(error);
+        },
+        []
+    );*/
+
+     const onError = useCallback(
+        (error: WalletError) => {
+            // Removed the notify call here
             console.error(error);
         },
         []
