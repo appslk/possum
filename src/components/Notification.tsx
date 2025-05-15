@@ -88,7 +88,7 @@ const Notification = ({ type, message,description, txid, onHide }) => {
               <div className="flex flex-row">
          
                 <a
-                  href={'https://solana.fm/address/' + txid + `?cluster=devnet`}
+                  href={'https://solana.fm/address/' + txid + `?cluster=mainnet`}
                   target="_blank"
                   rel="noreferrer"
                   className="flex flex-row link link-accent text-emerald-200"
