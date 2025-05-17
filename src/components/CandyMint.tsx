@@ -440,7 +440,7 @@ export const CandyMint: FC = () => {
 
             <div className="mint-info" id="colorH4">
                 <span id='txtColor'>Minted {_itemsRedeemed}/1000</span>
-                <div id='txtColor2'>Price: 0.75 SOL</div>
+                <div id='txtColor2'>Price: 0.25 SOL</div>
             </div>
 
             <div className="wallet-button-container" id="wallet">
