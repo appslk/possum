@@ -22,10 +22,10 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   background-image: radial-gradient(
     circle farthest-side at 50% 100%,
-    #96897b,
-    #96897b 36%,
-    #96897b 55%,
-    #96897b
+    #75d8cd,
+    #75d8cd 36%,
+    #75d8cd 55%,
+    #75d8cd
   );
   overflow-x: hidden;
   overflow-y: auto;
