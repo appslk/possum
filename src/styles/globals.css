@@ -1,19 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Mochiy+Pop+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Grandstander:ital,wght@0,100..900;1,100..900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Mochiy+Pop+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
 
 /* Apply Quicksand font globally */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
 }
-
 
 html,
 body {
@@ -21,20 +20,21 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  background-image: radial-gradient(circle farthest-side at 50% 100%, #fffbd4,
-      #fffbd4 36%,
-      #fffbd4 55%,
-      #fffbd4);
+  background-image: radial-gradient(
+    circle farthest-side at 50% 100%,
+    #96897b,
+    #96897b 36%,
+    #96897b 55%,
+    #96897b
+  );
   overflow-x: hidden;
   overflow-y: auto;
   /* or scroll if you want a scroll bar to always appear */
-
 }
 
 .mintDetails {
   background-color: #fffbd400;
 }
-
 
 #colorH {
   font-weight: bold;
@@ -49,7 +49,6 @@ body {
 #colorH4 {
   flex-flow: column;
 }
-
 
 @media screen and (max-width: 499px) {
   #colorH {
@@ -139,7 +138,6 @@ a {
   margin-bottom: 2rem;
   font-size: 1.125rem;
   font-family: "Figtree", sans-serif;
-
 }
 
 .mint-button {
@@ -165,28 +163,25 @@ a {
   box-shadow: 1px 1px 0 #222;
 }
 
-
 .mint-button:hover {
   transform: scale(1.05);
 }
 
 #txtColor {
-  font-family: 'Comic Sans MS', 'Arial Rounded MT Bold', sans-serif;
+  font-family: "Comic Sans MS", "Arial Rounded MT Bold", sans-serif;
   text-align: center;
   font-size: 26px;
   font-weight: 900;
   color: rgb(49, 49, 49);
-
 }
 
 #txtColor2 {
-  font-family: 'Comic Sans MS', 'Arial Rounded MT Bold', sans-serif;
+  font-family: "Comic Sans MS", "Arial Rounded MT Bold", sans-serif;
   font-size: 23px;
   font-weight: 700;
   color: white;
   -webkit-text-stroke: 1.2px black;
   text-align: center;
-
 }
 
 #navBg {
@@ -211,7 +206,6 @@ a {
   margin-left: -30px;
 }
 
-
 @media screen and (max-width: 499px) {
   .title-line {
     display: block;
@@ -222,7 +216,6 @@ a {
     margin-left: auto;
     margin-right: auto;
   }
-
 }
 
 @media screen and (min-width: 500px) and (max-width: 767px) {
@@ -235,7 +228,6 @@ a {
     margin-left: auto;
     margin-right: auto;
   }
-
 }
 
 /* Add these new styles for the update form */
@@ -387,7 +379,7 @@ a {
   color: #aaa;
   padding: 20px;
 }
-@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap");
 
 .mintSection {
   margin-top: 10px;
@@ -431,7 +423,6 @@ a {
   margin: 12px auto 0 auto;
   background-color: #ffffff;
 }
-
 
 #wallet {
   margin-left: auto;
@@ -497,8 +488,9 @@ a {
   font-weight: 500;
   margin-bottom: 4px;
   letter-spacing: 0.025em;
-  font-family: 'Comic Sans MS', 'Arial Rounded MT Bold', sans-serif;
-  text-shadow: 2px 8px 6px rgba(0,0,0,0.2), 0px -5px 35px rgba(255,255,255,0.3);
+  font-family: "Comic Sans MS", "Arial Rounded MT Bold", sans-serif;
+  text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.2),
+    0px -5px 35px rgba(255, 255, 255, 0.3);
 }
 
 .custom-notification.loading .notification-message {
@@ -571,7 +563,7 @@ a {
 }
 
 .possum-title {
-  font-family: 'Luckiest Guy', cursive;
+  font-family: "Luckiest Guy", cursive;
   font-size: 4.3rem; /* adjust size as needed */
   color: white;
   -webkit-text-stroke: 3px #465a58;
@@ -579,10 +571,9 @@ a {
   margin: 1rem 0;
   text-transform: uppercase;
   letter-spacing: 2px;
-  
 }
 
-.copyAlert{
+.copyAlert {
   color: #129eda;
-    font-family: 'Comic Sans MS', 'Arial Rounded MT Bold', sans-serif;
+  font-family: "Comic Sans MS", "Arial Rounded MT Bold", sans-serif;
 }
