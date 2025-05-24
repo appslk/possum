@@ -38,7 +38,7 @@ export const HomeView: FC = ({}) => {
         <CandyMint />
       </div>
 
-      <div className="px-[15px]  sm:px-[20px] md:px-[30px] lg:px-[40px] xl:px-[45px] 2xl:px-[50px] relative z-[2] container mx-auto pb-[4em]">
+     /* <div className="px-[15px]  sm:px-[20px] md:px-[30px] lg:px-[40px] xl:px-[45px] 2xl:px-[50px] relative z-[2] container mx-auto pb-[4em]">
         <div className="flex justify-between">
           <Carousel />
         </div>
@@ -53,7 +53,7 @@ export const HomeView: FC = ({}) => {
         src={cloud}
         alt="Cloud"
         className="absolute top-[35%] right-0 w-1/4 max-w-[550px] object-cover object-center select-none"
-      />
+      />*/
     </div>
   );
 };
