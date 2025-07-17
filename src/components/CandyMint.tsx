@@ -434,6 +434,8 @@ export const CandyMint: FC = () => {
     setShowWL2(false);
     setShowWL3(false);
 
+    candyTime();
+    
     if (wallet.publicKey) {
       getUserSOLBalance(wallet.publicKey, connection);
       console.log("allowList.length : " + allowList.length);
@@ -456,9 +458,7 @@ export const CandyMint: FC = () => {
         if (allowList3[x] == wallet.publicKey.toBase58()) {
           setShowWL3(true);
         }
-      }
-
-      candyTime();
+      }      
     }
 
     console.log("_o" + _o);
@@ -493,7 +493,7 @@ export const CandyMint: FC = () => {
   return (
     <div className="mintDetails">
       <div className="mint-info" id="colorH4">
-        {/* <span id='txtColor'>Minted {_itemsRedeemed}/1000</span> */}
+        <span id='txtColor'>Minted {_itemsRedeemed}/{_itemsLoaded}</span>
         <div id="txtColor2">Price: 0.25 SOL</div>
       </div>
 
