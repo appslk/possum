@@ -224,9 +224,7 @@ export const CandyMint: FC = () => {
         collectionUpdateAuthority: candyMachine.authority,
         group: some("public"), // you have to mention the relevant group here
 
-        mintArgs: {
-          solPayment: some({ destination: treasury }), //treasury is the destination address
-        },
+        mintArgs: {},
       });
 
       // Build the transaction with the latest blockhash
@@ -553,3 +551,4 @@ export const CandyMint: FC = () => {
     </div>
   );
 };
+
