@@ -234,7 +234,7 @@ export const CandyMint: FC = () => {
         setComputeUnitLimit(umi, { units: 800_000 }).add(nft)
       );
 
-      //transaction.setBlockhash(transaction.getBlockhash());
+      transaction.setBlockhash(transaction.getBlockhash());
 
       const { signature } = await transaction.sendAndConfirm(umi, {
         confirm: { commitment: "confirmed" },
