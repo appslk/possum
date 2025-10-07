@@ -15,6 +15,11 @@ import {
     SlopeWalletAdapter,
     SolflareWalletAdapter,
     TorusWalletAdapter,
+    BackpackWalletAdapter,
+    CoinbaseWalletAdapter,
+    LedgerWalletAdapter,
+    MathWalletAdapter,
+    TrustWalletAdapter,
 } from "@solana/wallet-adapter-wallets";
 
 const ReactUIWalletModalProviderDynamic = dynamic(
@@ -36,34 +41,30 @@ const WalletContextProvider: FC<{ children: ReactNode }> = ({ children }) => {
 
     const wallets = useMemo(
         () => [
-            //new UnsafeBurnerWalletAdapter(),
             new PhantomWalletAdapter(),
-            new GlowWalletAdapter(),
-            new SlopeWalletAdapter(),
             new SolflareWalletAdapter({ network }),
+            new BackpackWalletAdapter(),
+            new GlowWalletAdapter(),
+            new CoinbaseWalletAdapter(),
+            new TrustWalletAdapter(),
             new TorusWalletAdapter(),
+            new LedgerWalletAdapter(),
+            new MathWalletAdapter(),
+            new SlopeWalletAdapter(),
+            //new UnsafeBurnerWalletAdapter(),
         ],
         [network]
     );
 
-    /*const onError = useCallback(
+    const onError = useCallback(
         (error: WalletError) => {
-            notify({ type: 'error', message: error.message ? `${error.name}: ${error.message}` : error.name });
-            console.error(error);
-        },
-        []
-    );*/
-
-     const onError = useCallback(
-        (error: WalletError) => {
-            // Removed the notify call here
+            // Log error but don't show notification to avoid spam
             console.error(error);
         },
         []
     );
 
     return (
-        // TODO: updates needed for updating and referencing endpoint: wallet adapter rework
         <ConnectionProvider endpoint={endpoint}>
             <WalletProvider wallets={wallets} onError={onError} autoConnect={autoConnect}>
                 <ReactUIWalletModalProviderDynamic>
